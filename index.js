@@ -20,17 +20,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-// 3. inisialisasi endpoint
-// [HTTP method: GET, POST, PUT, PATCH, DELETE]
-// .get()    --> utamanya untuk mengambil data, atau search
-// .post()   --> utamanya untuk menaruh (post) data baru ke dalam server
-// .put()    --> utamanya untuk menimpa data yang sudah ada di dalam server
-// .patch()  --> utamanya untuk "menambal" data yang sudah ada di dalam server
-// .delete() --> utamanya untuk menghapus data yang ada di dalam server
 
-// endpoint POST /chat
+
 app.post(
-  '/chat', // http://localhost:[PORT]/chat
+  '/chat', 
   async (req, res) => {
     const { body } = req;
     const { conversation } = body;
